@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Falcon Home Construction — Civil | MEP | PEB Solutions in Lahore</title>
+<meta name="description" content="PEC registered construction company in Lahore specializing in residential, commercial, PEB, MEP and civil infrastructure projects across Pakistan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A1628;
+    --navy-2:#0f1f3d;
+    --gold:#C9952A;
+    --gold-light:#e2b855;
+    --white:#ffffff;
+    --gray:#f4f5f7;
+    --gray-2:#e5e7eb;
+    --text:#1a2238;
+    --muted:#5b6473;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(10,22,40,.08);
+    --shadow-lg:0 20px 50px rgba(10,22,40,.18);
+    --container:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;color:var(--navy);line-height:1.2}
+  h2{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700}
+  h3{font-size:1.25rem;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:var(--container);margin:0 auto;padding:0 24px}
+  section{padding:90px 0;position:relative}
+  .section-head{text-align:center;max-width:720px;margin:0 auto 56px}
+  .eyebrow{color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:2px;font-size:.8rem;margin-bottom:12px;display:inline-block}
+  .section-head p{color:var(--muted);margin-top:14px}
+
+  /* NAV */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.92);backdrop-filter:blur(10px);transition:.3s}
+  .nav.scrolled{background:rgba(10,22,40,.98);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--container);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Poppins';font-weight:700;font-size:1.15rem}
+  .brand-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:grid;place-items:center;font-size:1.3rem}
+  .brand small{display:block;font-size:.65rem;color:var(--gold);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{color:#dfe5ef;font-weight:500;font-size:.95rem;position:relative;padding:6px 0;transition:color .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+  .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold)}
+  .nav-cta{background:var(--gold);color:var(--navy);padding:10px 20px;border-radius:8px;font-weight:600;font-size:.9rem;transition:.2s}
+  .nav-cta:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .hamburger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;padding:120px 0 60px;background:linear-gradient(rgba(10,22,40,.85),rgba(10,22,40,.78)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80') center/cover}
+  .hero-grid{display:grid;gap:40px;align-items:center}
+  .hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;margin-bottom:20px}
+  .hero h1 span{color:var(--gold)}
+  .hero p.sub{font-size:1.1rem;color:#cfd6e3;max-width:620px;margin-bottom:32px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;cursor:pointer;border:0;transition:.25s;font-size:1rem;font-family:inherit}
+  .btn-primary{background:var(--gold);color:var(--navy)}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 25px rgba(201,149,42,.4)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:40px;border-top:1px solid rgba(255,255,255,.15)}
+  .stat .num{font-family:'Poppins';font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--gold)}
+  .stat .lbl{font-size:.85rem;color:#cfd6e3;margin-top:4px}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80') center/cover;position:relative}
+  .about-img::after{content:"";position:absolute;inset:0;border:3px solid var(--gold);border-radius:var(--radius);transform:translate(16px,16px);z-index:-1}
+  .about-text h2{margin-bottom:20px}
+  .about-text p{color:var(--muted);margin-bottom:16px}
+  .mission-list{list-style:none;margin-top:20px}
+  .mission-list li{padding:10px 0 10px 32px;position:relative;color:var(--text)}
+  .mission-list li::before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;background:var(--gold);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+  .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .badge{background:var(--gray);color:var(--navy);padding:8px 16px;border-radius:30px;font-size:.85rem;font-weight:600;border-left:3px solid var(--gold)}
+
+  /* SERVICES */
+  #services{background:var(--gray)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .service-card{background:#fff;padding:32px 28px;border-radius:var(--radius);transition:.35s;border:2px solid transparent;cursor:default;position:relative;overflow:hidden}
+  .service-card::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--gold);transition:.4s}
+  .service-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 40px rgba(201,149,42,.18)}
+  .service-card:hover::before{width:100%}
+  .service-icon{font-size:2.2rem;width:64px;height:64px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--gold);border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+  .service-card h3{margin-bottom:8px}
+  .service-card p{color:var(--muted);font-size:.95rem}
+
+  /* PROJECTS */
+  .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+  .filter-btn{padding:10px 22px;border-radius:30px;background:#fff;border:2px solid var(--gray-2);color:var(--text);cursor:pointer;font-weight:600;transition:.25s;font-family:inherit;font-size:.9rem}
+  .filter-btn:hover{border-color:var(--gold)}
+  .filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .project-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;border:1px solid var(--gray-2)}
+  .project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .project-img{height:200px;background-size:cover;background-position:center;position:relative}
+  .project-tag{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:20px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#fff}
+  .tag-Residential{background:#2563eb}
+  .tag-Commercial{background:#7c3aed}
+  .tag-Infrastructure{background:#dc2626}
+  .project-body{padding:22px}
+  .project-body h3{font-size:1.05rem;margin-bottom:6px;min-height:50px}
+  .project-meta{color:var(--muted);font-size:.85rem;margin-bottom:14px}
+  .project-stats{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--gray-2)}
+  .project-cost{color:var(--gold);font-weight:700;font-family:'Poppins'}
+  .project-duration{font-size:.8rem;color:var(--muted)}
+  .status-done{color:#16a34a;font-weight:600;font-size:.8rem;margin-top:8px;display:block}
+
+  /* QUALITY */
+  #quality{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;position:relative;overflow:hidden}
+  #quality::before{content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,149,42,.15),transparent 70%)}
+  #quality h2,#quality .section-head p{color:#fff}
+  #quality .section-head p{color:#cfd6e3}
+  .quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+  .quality-card{background:rgba(255,255,255,.04);padding:30px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08);transition:.3s;text-align:center}
+  .quality-card:hover{background:rgba(201,149,42,.08);border-color:var(--gold);transform:translateY(-5px)}
+  .quality-icon{font-size:2rem;width:70px;height:70px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;color:var(--navy)}
+  .quality-card h3{color:#fff;margin-bottom:8px}
+  .quality-card p{color:#cfd6e3;font-size:.9rem}
+  .quality-tag{text-align:center;margin-top:50px;font-size:1.3rem;font-family:'Poppins';color:var(--gold);font-weight:600;font-style:italic}
+
+  /* TEAM */
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .team-card{background:#fff;border-radius:var(--radius);text-align:center;padding:32px 20px;box-shadow:var(--shadow);transition:.3s;border-top:4px solid var(--gold)}
+  .team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:var(--gold);display:grid;place-items:center;font-size:2rem;font-weight:700;margin:0 auto 16px;font-family:'Poppins'}
+  .team-card h3{margin-bottom:4px;font-size:1.1rem}
+  .team-role{color:var(--gold);font-weight:600;font-size:.85rem;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+  .team-phone{color:var(--muted);font-size:.9rem;display:inline-flex;align-items:center;gap:6px}
+  .team-phone:hover{color:var(--navy)}
+
+  /* CONTACT */
+  #contact{background:var(--gray)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .contact-form,.contact-info{background:#fff;padding:36px;border-radius:var(--radius);box-shadow:var(--shadow)}
+  .form-group{margin-bottom:18px}
+  .form-group label{display:block;font-weight:600;margin-bottom:6px;font-size:.9rem;color:var(--navy)}
+  .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid var(--gray-2);border-radius:8px;font-family:inherit;font-size:.95rem;transition:.2s;background:#fff}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,149,42,.12)}
+  .form-group textarea{resize:vertical;min-height:110px}
+  .form-msg{padding:12px;border-radius:8px;margin-top:12px;font-size:.9rem;display:none}
+  .form-msg.show{display:block}
+  .form-msg.success{background:#dcfce7;color:#166534;border:1px solid #86efac}
+  .contact-info h3{margin-bottom:18px;color:var(--navy)}
+  .info-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--gray-2)}
+  .info-item:last-of-type{border:0}
+  .info-icon{font-size:1.4rem;width:44px;height:44px;background:var(--gray);border-radius:10px;display:grid;place-items:center;flex-shrink:0}
+  .info-item strong{display:block;color:var(--navy);font-size:.9rem;margin-bottom:2px}
+  .info-item span{color:var(--muted);font-size:.9rem}
+  .map{margin-top:20px;border-radius:10px;overflow:hidden;height:220px}
+  .map iframe{width:100%;height:100%;border:0}
+
+  /* WHATSAPP */
+  .whatsapp{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:#25D366;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.8rem;box-shadow:0 8px 24px rgba(37,211,102,.45);z-index:90;transition:.25s;animation:pulse 2s infinite}
+  .whatsapp:hover{transform:scale(1.1)}
+  @keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.45)}50%{box-shadow:0 8px 24px rgba(37,211,102,.45),0 0 0 12px rgba(37,211,102,.15)}}
+
+  /* FOOTER */
+  footer{background:#06101f;color:#cfd6e3;padding:60px 0 24px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:40px}
+  footer h4{color:#fff;margin-bottom:18px;font-size:1rem;text-transform:uppercase;letter-spacing:1.5px}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px;font-size:.92rem}
+  footer ul li a{color:#9aa5b8;transition:.2s}
+  footer ul li a:hover{color:var(--gold);padding-left:4px}
+  footer .brand{margin-bottom:14px}
+  .footer-about{font-size:.9rem;line-height:1.7}
+  .footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:.85rem;color:#7a8497}
+
+  /* ANIMATIONS */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .nav-links{position:fixed;top:74px;left:0;right:0;background:var(--navy);flex-direction:column;padding:24px;gap:18px;transform:translateY(-150%);transition:.35s;border-top:1px solid rgba(255,255,255,.08)}
+    .nav-links.open{transform:translateY(0)}
+    .hamburger{display:block}
+    .nav-cta{display:none}
+    .about-grid,.contact-grid{grid-template-columns:1fr}
+    .services-grid,.projects-grid,.quality-grid{grid-template-columns:repeat(2,1fr)}
+    .team-grid{grid-template-columns:repeat(2,1fr)}
+    .stats{grid-template-columns:repeat(2,1fr);gap:20px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+    section{padding:70px 0}
+  }
+  @media(max-width:560px){
+    .services-grid,.projects-grid,.quality-grid,.team-grid,.footer-grid{grid-template-columns:1fr}
+    .hero{padding-top:100px}
+    .hero-ctas{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <div class="brand-icon">🦅</div>
+      <div>Falcon Home Construction<small>Civil • MEP • PEB</small></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#quality">Quality</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">PEC • NTN • GST Registered</span>
+      <h1>Building Your Vision,<br>One <span>Project</span> at a Time</h1>
+      <p class="sub">PEC Registered | Civil, MEP & PEB Specialists | Lahore, Pakistan. Delivering quality construction across residential, commercial and heavy infrastructure projects.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View Our Projects →</a>
+        <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+      <div class="stats" id="stats">
+        <div class="stat"><div class="num" data-count="8" data-suffix="+">0</div><div class="lbl">Projects Completed</div></div>
+        <div class="stat"><div class="num" data-count="60" data-suffix="M+">0</div><div class="lbl">PKR Delivered</div></div>
+        <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">On-Time Delivery</div></div>
+        <div class="stat"><div class="num" data-count="6" data-suffix=" Yrs">0</div><div class="lbl">Experience</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal"></div>
+      <div class="about-text reveal">
+        <span class="eyebrow">About Us</span>
+        <h2>Engineering Excellence, Built on Trust</h2>
+        <p><strong>Our Vision:</strong> To go nationwide offering seamless construction services to clients of all scales — combining engineering precision with uncompromising quality.</p>
+        <p><strong>Our Mission:</strong></p>
+        <ul class="mission-list">
+          <li>Deliver top-quality service on every project</li>
+          <li>Prioritize customer care at every stage</li>
+          <li>Consistently exceed client expectations</li>
+          <li>Maintain professional, transparent communication</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">PEC Registered</span>
+          <span class="badge">NTN Certified</span>
+          <span class="badge">GST Registered</span>
+          <span class="badge">Licensed Engineers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Services</h2>
+      <p>End-to-end construction solutions from foundation to finishing — across civil, MEP, and pre-engineered building disciplines.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon">🏠</div><h3>Residential Construction</h3><p>Houses, flats, and bungalows built to lasting standards.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🏢</div><h3>Commercial Buildings</h3><p>Offices, shops, and plazas designed for performance.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🏗️</div><h3>PEB Steel Buildings</h3><p>Pre-engineered solutions for warehouses & factories.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🌉</div><h3>RCC Bridges</h3><p>Heavy civil infrastructure delivered with precision.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🔧</div><h3>MEP Works</h3><p>Mechanical, electrical & plumbing — fully integrated.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🏥</div><h3>Hospital & Institutional</h3><p>Specialized buildings for healthcare & education.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🛣️</div><h3>Road Construction</h3><p>Roads and access infrastructure built to last.</p></div>
+      <div class="service-card reveal"><div class="service-icon">🎨</div><h3>Finishing & Interior</h3><p>Premium finishing works that bring spaces to life.</p></div>
+      <div class="service-card reveal"><div class="service-icon">📋</div><h3>Project Management</h3><p>Quantity surveying and full project supervision.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Portfolio</span>
+      <h2>Completed Projects</h2>
+      <p>A snapshot of recently delivered work — on time, on budget, and to specification.</p>
+    </div>
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Residential">Residential</button>
+      <button class="filter-btn" data-filter="Commercial">Commercial</button>
+      <button class="filter-btn" data-filter="Infrastructure">Infrastructure</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section id="quality">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--gold-light)">Our Standards</span>
+      <h2>Quality Policy</h2>
+      <p>Six pillars guide every project we deliver — from material sourcing to final handover.</p>
+    </div>
+    <div class="quality-grid">
+      <div class="quality-card reveal"><div class="quality-icon">📦</div><h3>Procurement</h3><p>Sourcing certified materials from trusted suppliers.</p></div>
+      <div class="quality-card reveal"><div class="quality-icon">⚙️</div><h3>Process Control</h3><p>Standardized workflows ensure consistent results.</p></div>
+      <div class="quality-card reveal"><div class="quality-icon">🔬</div><h3>Inspection & Testing</h3><p>Rigorous QC at every construction milestone.</p></div>
+      <div class="quality-card reveal"><div class="quality-icon">📊</div><h3>Test Status Tracking</h3><p>Full traceability of every test and certification.</p></div>
+      <div class="quality-card reveal"><div class="quality-icon">🚫</div><h3>Non-Conformity Control</h3><p>Immediate corrective action on any deviation.</p></div>
+      <div class="quality-card reveal"><div class="quality-icon">⭐</div><h3>Customer First</h3><p>Client satisfaction drives every decision we make.</p></div>
+    </div>
+    <p class="quality-tag reveal">"Your satisfaction is our corrective action."</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Leadership</span>
+      <h2>Meet Our Team</h2>
+      <p>Experienced engineers and managers committed to delivering excellence on every project.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="avatar">CA</div><h3>Ch Muhammad Ali</h3><div class="team-role">Managing Partner</div><a href="tel:+923007454336" class="team-phone">📞 +92-300 7454336</a></div>
+      <div class="team-card reveal"><div class="avatar">MA</div><h3>Mubashar Ahmad</h3><div class="team-role">Civil Engineer</div><a href="tel:+923086450255" class="team-phone">📞 +92-308 6450255</a></div>
+      <div class="team-card reveal"><div class="avatar">MS</div><h3>Muhammad Shoib</h3><div class="team-role">Civil Engineer</div><a href="tel:+923344594911" class="team-phone">📞 +92-334 4594911</a></div>
+      <div class="team-card reveal"><div class="avatar">MQ</div><h3>Muhammad Saqib</h3><div class="team-role">Site Supervisor</div><a href="tel:+923026815710" class="team-phone">📞 +92-302 6815710</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Start Your Project</h2>
+      <p>Tell us about your vision and we'll get back within one business day with a free estimate.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group"><label>Full Name</label><input type="text" name="name" required placeholder="Your name"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" required placeholder="+92 300 0000000"></div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" required placeholder="you@example.com"></div>
+        <div class="form-group"><label>Project Type</label>
+          <select name="type" required>
+            <option value="">Select project type…</option>
+            <option>Residential Construction</option>
+            <option>Commercial Building</option>
+            <option>PEB Steel Building</option>
+            <option>MEP Works</option>
+            <option>Infrastructure / Bridge / Road</option>
+            <option>Finishing & Interior</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Project Details</label><textarea name="message" required placeholder="Briefly describe your project, location, and timeline…"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Send Message →</button>
+        <div class="form-msg success" id="formMsg">✓ Thank you! Your message has been sent. We'll be in touch soon.</div>
+      </form>
+      <div class="contact-info reveal">
+        <h3>Contact Information</h3>
+        <div class="info-item"><div class="info-icon">📞</div><div><strong>Phone</strong><span>+92-300 7454336 (Ch Muhammad Ali)</span></div></div>
+        <div class="info-item"><div class="info-icon">📧</div><div><strong>Email</strong><span>Chodhryali77@gmail.com</span></div></div>
+        <div class="info-item"><div class="info-icon">📍</div><div><strong>Office</strong><span>Rehan Garden Phase 1, 78-B, Ferozpur Road, Raiwind, Lahore</span></div></div>
+        <div class="info-item"><div class="info-icon">📋</div><div><strong>Registrations</strong><span>PEC | NTN | GST Registered</span></div></div>
+        <div class="map"><iframe src="https://www.google.com/maps?q=Rehan+Garden+Raiwind+Road+Lahore&output=embed" loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/923007454336" class="whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><div class="brand-icon">🦅</div><div style="color:#fff">Falcon Home Construction<small>Civil • MEP • PEB</small></div></div>
+        <p class="footer-about">PEC registered construction firm delivering residential, commercial and infrastructure projects across Pakistan with engineering precision and uncompromising quality.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Residential</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">PEB Buildings</a></li><li><a href="#services">MEP Works</a></li><li><a href="#services">RCC Bridges</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📍 Rehan Garden Phase 1, Raiwind, Lahore</li>
+          <li>📞 +92-300 7454336</li>
+          <li>📧 Chodhryali77@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Falcon Home Construction. All Rights Reserved. PEC | NTN | GST Registered.</div>
+  </div>
+</footer>
+
+<script>
+  // PROJECT DATA
+  const projects = [
+    {n:1,title:"5 Marla House with Finishing",client:"Dr. Arslan Saeed",loc:"College Town, Lahore",cost:"9.5M PKR",dur:"6 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"},
+    {n:2,title:"5 Marla House with Finishing",client:"Mr. Areesh Mubashar",loc:"College Town, Lahore",cost:"8M PKR",dur:"5 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80"},
+    {n:3,title:"10 Marla House Grey Work",client:"Mr. Fida Siddique",loc:"Elite Town, Lahore",cost:"4.5M PKR",dur:"3 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80"},
+    {n:4,title:"12 Marla House Grey Work & Finishing",client:"Mr. Fida Siddique",loc:"Elite Town, Lahore",cost:"17.5M PKR",dur:"7 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"},
+    {n:5,title:"Army Cross Regulator Construction",client:"Captain Yasir",loc:"Barki Hadyara, Lahore",cost:"25.6M PKR",dur:"4.5 Months",cat:"Infrastructure",img:"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"},
+    {n:6,title:"Allied School Grey Work",client:"Mr. Amir Sahib",loc:"Sanda Campus, MAO College",cost:"11.5M PKR",dur:"3 Months",cat:"Commercial",img:"https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80"},
+    {n:7,title:"3 Marla House Grey Work & Finishing",client:"Mr. Sardar Ali Klia",loc:"Rehan Garden Phase 1, Lahore",cost:"4.2M PKR",dur:"5 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800&q=80"},
+    {n:8,title:"2.5 Marla House Grey Work & Finishing",client:"Mr. Sardar Ali Klia",loc:"Rehan Garden Phase 1, Lahore",cost:"3.5M PKR",dur:"4.5 Months",cat:"Residential",img:"https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80"}
+  ];
+
+  const grid = document.getElementById('projectsGrid');
+  function renderProjects(filter='all'){
+    grid.innerHTML = projects.filter(p=>filter==='all'||p.cat===filter).map(p=>`
+      <div class="project-card reveal visible">
+        <div class="project-img" style="background-image:url('${p.img}')">
+          <span class="project-tag tag-${p.cat}">${p.cat}</span>
+        </div>
+        <div class="project-body">
+          <h3>${p.title}</h3>
+          <div class="project-meta">👤 ${p.client} · 📍 ${p.loc}</div>
+          <div class="project-stats">
+            <span class="project-cost">${p.cost}</span>
+            <span class="project-duration">⏱ ${p.dur}</span>
+          </div>
+          <span class="status-done">✅ Completed</span>
+        </div>
+      </div>`).join('');
+  }
+  renderProjects();
+  document.querySelectorAll('.filter-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      renderProjects(b.dataset.filter);
+    });
+  });
+
+  // NAV
+  const nav=document.getElementById('nav');
+  const navLinks=document.getElementById('navLinks');
+  document.getElementById('hamburger').addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  window.addEventListener('scroll',()=>{
+    nav.classList.toggle('scrolled',window.scrollY>30);
+    // active link
+    const sections=document.querySelectorAll('section,header');
+    let cur='home';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id});
+    navLinks.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+  });
+
+  // REVEAL
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // COUNTERS
+  const statsEl=document.getElementById('stats');
+  const counted={done:false};
+  const cio=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && !counted.done){
+        counted.done=true;
+        document.querySelectorAll('#stats .num').forEach(n=>{
+          const target=+n.dataset.count, suf=n.dataset.suffix||'';
+          let cur=0, step=Math.max(1,target/60);
+          const t=setInterval(()=>{
+            cur+=step;
+            if(cur>=target){cur=target;clearInterval(t)}
+            n.textContent=Math.floor(cur)+suf;
+          },25);
+        });
+      }
+    });
+  },{threshold:.4});
+  cio.observe(statsEl);
+
+  // FORM
+  document.getElementById('contactForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.target;
+    if(!f.checkValidity()){f.reportValidity();return}
+    document.getElementById('formMsg').classList.add('show');
+    f.reset();
+    setTimeout(()=>document.getElementById('formMsg').classList.remove('show'),5000);
+  });
+</script>
+</body>
+</html>
